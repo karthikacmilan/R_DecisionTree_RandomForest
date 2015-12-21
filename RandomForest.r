@@ -22,4 +22,10 @@ pdf("importance.pdf")
 varImpPlot(ran)
 #saving to pdf
 graphics.off()
-
+#test the random forest on test data 
+pre = predict(ran,newdata = testdata)
+table(pre,testdata$V3)
+pdf("margin.pdf")
+plot(margin(ran,testdata$V3))
+#plot and margin to check 
+graphics.off()
