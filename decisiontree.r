@@ -5,7 +5,7 @@ attributes(HEC)
 #training set and test set 
 #Decision tree
 set.seed(1234)
-#splitting 80%-20% 
+#splitting 80-20% 
 samplespace = sample(2,nrow(HEC),replace=TRUE,prob = c(0.8,0.2))
 trainingdata = HEC[samplespace==1,]
 testdata = HEC[samplespace==2,]
